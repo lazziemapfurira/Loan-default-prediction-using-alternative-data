@@ -1,20 +1,16 @@
-# Loan-default-prediction-using-alternative-data
-
-![banner](assets/Credit_card_approval_banner.png)
+![banner](images/Default_Prediction.png)
 Banner [source](https://banner.godori.dev/)
 
 ![Python version](https://img.shields.io/badge/Python%20version-3.10%2B-lightgrey)
-![GitHub last commit](https://img.shields.io/github/last-commit/semasuka/Credit-card-approval-prediction-classification)
-![GitHub repo size](https://img.shields.io/github/repo-size/semasuka/Credit-card-approval-prediction-classification)
+![GitHub last commit](https://img.shields.io/github/last-commit/lazziemapfurira/Loan-default-prediction-using-alternative-data)
+![GitHub repo size](https://img.shields.io/github/repo-size/lazziemapfurira/Loan-default-prediction-using-alternative-data)
 ![Type of ML](https://img.shields.io/badge/Type%20of%20ML-Binary%20Classification-red)
 ![License](https://img.shields.io/badge/License-MIT-green)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1CfV6yEsHBjFiJbTKwY72k2g4AvszcF5R)
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/semasuka/credit-card-approval-prediction-classification/main/cc_approval_pred.py)
-[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/lazziemapfurira/Loan-default-prediction-app/main/streamli_app.py)
+[![Open Source Love](https://badges.frapsoft.com/os/v3/open-source-200x33.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
 Badge [source](https://shields.io/)
 
-# Key findings: People with the highest income, and who have at least one partner, are more likely to be approved for a credit card.
+# Key findings: 
 
 
 ## Authors
@@ -35,9 +31,7 @@ Badge [source](https://shields.io/)
   - [Limitation and what can be improved](#limitation-and-what-can-be-improved)
   - [Run Locally](#run-locally)
   - [Explore the notebook](#explore-the-notebook)
-  - [Deployment on streamlit](#deployment-on-streamlit)
   - [App deployed on Streamlit](#app-deployed-on-streamlit)
-  - [Repository structure](#repository-structure)
   - [Contribution](#contribution)
   - [License](#license)
 
@@ -45,11 +39,11 @@ Badge [source](https://shields.io/)
 
 
 ## Business problem
+This app predicts the likelihood that a loan applicant will default on their loan. Financial institutions face significant risk when issuing loans, especially without clear insight into a borrower’s credit behaviour. This predictive system helps lenders assess a borrower’s default risk before approving a loan by analysing historical, behavioural, and social economic data. Predicting default probability supports smarter lending decisions minimizing financial losses while promoting responsible lending.
 
-This app predicts if an applicant will be approved for a credit card or not. Each time there is a hard enquiry your credit score is affected negatively. This app predict the probability of being approved without affecting your credit score. This app can be used by applicant who wants to find out if they will be approved for a credit card without affecting their credit score.
 ## Data source
 
-- [Kaggle credit card approval prediction](https://www.kaggle.com/rikdifos/credit-card-approval-prediction)
+- [Kaggle Home Credit Default Risk](https://www.kaggle.com/competitions/home-credit-default-risk)
 
 ## Methods
 
@@ -123,7 +117,7 @@ git init
 Clone the project
 
 ```bash
-git clone https://github.com/semasuka/Credit-card-approval-prediction-classification.git
+git clone https://github.com/lazziemapfurira/Loan-default-prediction-app.git
 ```
 
 enter the project directory
@@ -159,65 +153,10 @@ If you are having issue with streamlit, please follow [this tutorial on how to s
 
 ## Explore the notebook
 
-To explore the notebook file [here](https://nbviewer.org/github/semasuka/Income-classification/blob/master/Income_Classification.ipynb)
-
-## Deployment on streamlit
-
-To deploy this project on streamlit share, follow these steps:
-
-- first, make sure you upload your files on Github, including a requirements.txt file
-- go to [streamlit share](https://share.streamlit.io/)
-- login with Github, Google, etc.
-- click on new app button
-- select the Github repo name, branch, python file with the streamlit codes
-- click advanced settings, select python version 3.9 and add the secret keys if your model is stored on AWS or GCP bucket
-- then save and deploy!
-
 ## App deployed on Streamlit
 
 ![Streamlit GIF](assets/gif_streamlit.gif)
-## Repository structure
 
-
-```
-
-
-├── datasets
-│   ├── GDP.csv                     <- the data used to feature engineering/enriched the original data.
-│   ├── test.csv                    <- the test data.
-│   ├── train.csv                   <- the train data.
-│
-│
-├── assets
-│   ├── confusion_matrix.png        <- confusion matrix image used in the README.
-│   ├── gif_streamlit.gif           <- gif file used in the README.
-│   ├── heatmap.png                 <- heatmap image used in the README.
-│   ├── Income_classification.png   <- banner image used in the README.
-│   ├── environment.yml             <- list of all the dependencies with their versions(for conda environment).
-│   ├── roc.png                     <- ROC image used in the README.
-│
-├── pandas_profile_file
-│   ├── income_class_profile.html   <- exported panda profile html file.
-│
-│
-├── .gitignore                      <- used to ignore certain folder and files that won't be commit to git.
-│
-│
-├── Income_Classification.ipynb     <- main python notebook where all the analysis and modeling are done.
-│
-│
-├── LICENSE                         <- license file.
-│
-│
-├── income_class_st.py              <- file with the best model and best hyperparameter with streamlit component for rendering the interface.
-│
-│
-├── README.md                       <- this readme file.
-│
-│
-├── requirements.txt                <- list of all the dependencies with their versions(used for Streamlit ).
-
-```
 ## Contribution
 
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change or contribute.
